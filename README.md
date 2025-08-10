@@ -149,19 +149,19 @@ Revisando o churn vs as variáveis disponíveis nos dados temos que:
   
   <img src="./graficos/forma_pagamento.png" width="500" />
 
-- 
+- Comparando a distribuição do número de meses de contrato podemos observar que Clientes que cancelaram o contrato tem um número menor de meses de contrato e clientes com contrato vigente tem maior antiguedade de contrato. Isto é, o número de meses de contrato pode estar relacionado com o Churn de Clientes.
   
   <img src="./graficos/meses_contrato.png" width="500" />
 
-- 
+- Enquanto ao faturamento mensal, clientes que cancelaram contrato (Churn), tem uma concentração de faturamento mensal em valores maiores comparados com os clientes que permanecem com contrato ativo. Isto é, o faturamento mensal pode estar relacionado com o Churn de Clientes.
   
   <img src="./graficos/faturamento_mensal.png" width="500" />
 
-- 
+- No caso do faturamento total também observamos diferenças entre os grupos de clientes que cancelaram o contrato e o grupo que permanece. No entanto, é possivel que esta veiável tenha uma alta correlação com as variáveis de número de meses de contrato e faturamento mensal, pelo que uma analise de correlação pode ser pertinente.
   
   <img src="./graficos/faturamento_total.png" width="500" />
 
-- 
+- A distribuição das contas diarias traz a mesma informação que o faturamento mensal devido ao calculo dela, recomendamos omitir uma das duas variáveis na modelagem.
   
   <img src="./graficos/contas_diarias.png" width="500" />
 
