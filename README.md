@@ -80,7 +80,7 @@ A seguir, descrevemos os passos realizados para importar, limpar e tratar os dad
 
 ### Análise Exploratória de Dados
 
-<img src="./graficos/churn.png" width="500" />
+<img src="./graficos/churn.png" width="300" />
 
 <img src="./graficos/cliente_masculino.png" width="500" />
 <img src="./graficos/cliente_idoso.png" width="500" />
