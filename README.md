@@ -147,7 +147,7 @@ Revisando o churn vs as variáveis disponíveis nos dados temos que:
 
 - No caso da forma de pagamento, o Churn (45,3%) é maior nos Clientes que pagam com Cheque Eletrónico. Sendo eles o 33,6% dos Clientes. Talves uma revisão dos problemas que tem os Clientes com essa forma de pagamento seja pertinente.
   
-  <img src="./graficos/forma pagamento.png" width="500" />
+  <img src="./graficos/forma_pagamento.png" width="500" />
 
 - 
   
