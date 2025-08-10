@@ -55,5 +55,51 @@ Certifique-se de que o relatório esteja bem estruturado, claro e com as visuali
 - Os requerimentos estão listados do arquivo [requirements.txt](requirements.txt).
 
 ## Relatotio:
+
+### Introdução:
+Atuamos como analistas de dados no projeto **"Churn de Clientes"** na empresa **Telecom X**. A empresa enfrenta um alto índice de cancelamentos e o projeto tem como objetivo entender os fatores que levam à perda de clientes (Churn). Nesta primeira parte do projeto temos a tarefa de **coletar, tratar e analisar os dados**, utilizando **Python** e suas principais bibliotecas para extrair insights valiosos. A partir da nossa análise, os demais colegas da equipe de Data Science poderão avançar para modelos preditivos e desenvolver estratégias para reduzir a evasão.
+
+Para um melhor acompanhamento de cada uma das etapas dividimos o relatorio em 4 partes: 
+ - Primeiro, Limpeza e Tratamento de Dados. Aqui comentamos como realizamos a leitura dos dados, verificação de inconsistencias, transformações para tratar inconsistencias e obter uma base corretamente estrururada, padronizada, com os formatos de dados apropriados e mais acessível.
+ - Segundo, Analise Exploratória de Dados. Aqui, com ajuda de métricas e gráficos, analisamos as variáveis e sua relação com o Churn de Clientes.
+ - Terceiro, listamos as principais conclusões a partir da análise exploratoria.
+ - Finalizamos apresentando algumas recomendações.
+
+### Limpeza e Tratamento de Dados
+
+
+### Análise Exploratória de Dados
+
+<img src="./graficos/cliente_idoso.png" width="500" />
+<img src="./graficos/cliente_tem_parceiro.png" width="500" />
+<img src="./graficos/cliente_tem_dependentes.png" width="500" />
+<img src="./graficos/servico_telefonico.png" width="500" />
+<img src="./graficos/multiplas_linhas.png" width="500" />
+<img src="./graficos/assinatura_internet.png" width="500" />
+<img src="./graficos/seguranca_online.png" width="500" />
+<img src="./graficos/backup_online.png" width="500" />
+<img src="./graficos/protecao_dispositivo.png" width="500" />
+<img src="./graficos/suporte_tecnico.png" width="500" />
+<img src="./graficos/tv_a_cabo.png" width="500" />
+<img src="./graficos/streaming_filmes.png" width="500" />
+<img src="./graficos/contrato.png" width="500" />
+<img src="./graficos/fatura_online.png" width="500" />
+<img src="./graficos/forma pagamento.png" width="500" />
+<img src="./graficos/cliente_masculino.png" width="500" />
+
+<img src="./graficos/meses_contrato.png" width="500" />
+<img src="./graficos/faturamento_mensal.png" width="500" />
+<img src="./graficos/faturamento_total.png" width="500" />
+<img src="./graficos/contas_diarias.png" width="500" />
+
+### Conclusões e Insights
+
+### Recomendações
+
+
+
+### Recomendações
+
+
   
   
