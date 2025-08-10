@@ -66,7 +66,12 @@ Para um melhor acompanhamento de cada uma das etapas dividimos o relatorio em 4 
  - Finalizamos apresentando algumas recomendações.
 
 ### Limpeza e Tratamento de Dados
-
+A seguir, descrevemos os passos realizados para importar, limpar e tratar os dados. Maiores detalhes podem ser encontrados no seguinte [notebook](https://github.com/Angel-Arroyo-H/alura-data-science-challenge-2/blob/main/Alura_DataScience_Challenge2.ipynb).
+- Os dados foram extraidos do seguinte [URL](https://raw.githubusercontent.com/alura-cursos/challenge2-data-science/refs/heads/main/TelecomX_Data.json), os dados de origem estão em formato JSON, usamos as livrarias `request`, `json` e `pandas` para importar os dados, primeiro, para um diccionario e posteriormente para um DataFrame após normalizar os dados contidos no diccionario.
+- Os dados não apresentaram valores nulos em todos os campos, no entanto a coluna `Churn` apresentou 224 registros (3% do total) preenchidos com apenas um espaço, dado que o `Churn` é a variável de interesse no estudo decidimos remover esses registros da base.
+- Após revisar as descrições das outras variáveis e olhar para os valores únicos delas, dividimos elas pelo tipo de variáveis que esperavamos. Isto é, variáveis booleanas, categóricas, inteiras e float.
+- Nas variáveis booleanas reemplazamos os valores por `True` e `False`. No caso da variável `customer_gender` (genero do cliente), transformamos a variável para `customer_is_male` (cliente é homem) a fim de ser compatível com os valores `True` e `False`. Dessa forma transformamos o tipo dessas variáveis de `object` para `bool`.
+- No casso das variáveis numéricas 
 
 ### Análise Exploratória de Dados
 
