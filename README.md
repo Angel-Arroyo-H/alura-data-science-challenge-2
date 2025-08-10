@@ -76,10 +76,13 @@ A seguir, descrevemos os passos realizados para importar, limpar e tratar os dad
 - Fizemos uma contagem de valores por categoria para as variáveis não numéricas (bool e object) e não observamos valores nem categorias inconsistentes nessas variáveis.
 - Para tornar os dados mais acessíveis e padronizados, traduzimos e substituimos as categorias das variáveis categóricas (tipo object) e os nomes de todas as variáveis (colunas).
 - Adicionamos a coluna `contas_diarias` a partir da coluna `faturamento_mensal` (antes `account_Charges_Monthly`).
-- Como passo final nesta etapa, resetamos os índices e salvamos em formato CSV os dados tratados (salvamos uma [copia]() neste repositorio).
+- Como passo final nesta etapa, resetamos os índices e salvamos em formato CSV os dados tratados (salvamos uma [copia](https://github.com/Angel-Arroyo-H/alura-data-science-challenge-2/blob/main/dados/dados_tratados.csv) neste repositório).
 
 ### Análise Exploratória de Dados
 
+<img src="./graficos/churn.png" width="500" />
+
+<img src="./graficos/cliente_masculino.png" width="500" />
 <img src="./graficos/cliente_idoso.png" width="500" />
 <img src="./graficos/cliente_tem_parceiro.png" width="500" />
 <img src="./graficos/cliente_tem_dependentes.png" width="500" />
@@ -95,7 +98,6 @@ A seguir, descrevemos os passos realizados para importar, limpar e tratar os dad
 <img src="./graficos/contrato.png" width="500" />
 <img src="./graficos/fatura_online.png" width="500" />
 <img src="./graficos/forma pagamento.png" width="500" />
-<img src="./graficos/cliente_masculino.png" width="500" />
 
 <img src="./graficos/meses_contrato.png" width="500" />
 <img src="./graficos/faturamento_mensal.png" width="500" />
