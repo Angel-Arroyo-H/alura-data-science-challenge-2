@@ -194,7 +194,7 @@ Os valores resultantes mostram uma alta correlação entre quase todas as variá
 
 ### Conclusões e Insights
 
-- O processo de ETL (extração, transformação e carregamento) de dados que inclui limpar e organizar os dados é um passo previo fundamental à análise descritiva e modelagem estatística.
+- O processo de ETL (extração, transformação e carregamento) de dados que inclui limpar e organizar os dados é um passo previo fundamental à análise descritiva e modelagem estatística. O Processo ser revisado em detalhes e reproduzido no seguinte [notebook](Alura_DataScience_Challenge2.ipynb).
 - Os dados brutos apresentaram aproximadamente um 3% de registros que tiveram que ser excluidos por apresentar dados inconsistentes.
 - Para tornar os dados mais acessíveis traduzimos o nome das colunas e categorias para o portugues seguindo o padrão de minusculas separadas com underline, no caso das colunas.
 - Os dados tratados foram salvos em formato CSV e podem ser obtidos [aqui](https://raw.githubusercontent.com/Angel-Arroyo-H/alura-data-science-challenge-2/refs/heads/main/dados/dados_tratados.csv).
@@ -214,7 +214,7 @@ Os valores resultantes mostram uma alta correlação entre quase todas as variá
   - Clientes com um Faturamento Mensal maior.
 
 ### Recomendações
-- Possivelmente as variáveis Género, Serviço Telefónico e Serviço de Multiplas Linhas não aportem informação relevante para um futuro modelo de classificação. Avaliar a pertinencia delas. O Processo ser revisado em detalhes e reproduzido no seguinte [notebook](Alura_DataScience_Challenge2.ipynb).
+- Possivelmente as variáveis Género, Serviço Telefónico e Serviço de Multiplas Linhas não aportem informação relevante para um futuro modelo de classificação. Avaliar a pertinencia delas.
 - A variável Contas Diarias e Faturamento Mensal trazem a mesma informação, se recomenda desconsiderar alguma delas na etapa de modelagem.
 - A alta correlação da variável Faturamento Total com as variáveis Meses de Contrato e Faturamento Mensal pode ocasionar problema de multicolinearidade. Se recomenda desconsiderar a variável Faturamento Total.
 - De certa forma, via analise exploratoria, conseguimos identificar o perfil dos clientes com percentual alto de Churn. Isso ainda precisa ser confirmado pela etapa de modelagem. No entanto, algumas ações podem ser tomadas para verificar hipótesis que derivam desse perfil, e tomar medidas para reduzir o Churn de Clientes. Por exemplo:
