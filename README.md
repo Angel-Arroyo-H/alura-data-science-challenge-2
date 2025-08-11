@@ -83,10 +83,12 @@ A seguir, descrevemos os passos realizados para importar, limpar e tratar os dad
 
 ### Análise Exploratória de Dados
 
+#### Percentagem de Churn
 O churn dos clientes da **Telecom X** é de 26,6%.
 
 <img src="./graficos/churn.png" width="300" />
 
+#### Churn vs Variáveis
 Revisando o churn vs as variáveis disponíveis nos dados temos que:
 - No caso do género, não se observa diferença significativa no percentual de Churn entre mulheres e homens.
 
@@ -168,14 +170,48 @@ Revisando o churn vs as variáveis disponíveis nos dados temos que:
   
   <img src="./graficos/contas_diarias.png" width="500" />
 
+#### Correlação
+Para o cálculo das correlações omitimos as variáveis categóricas. Porém, incluimos as variáveis booleanas. Calculamos a matriz de correlação de Pearson (que é equivalente ao coeficiente Phi para variáveis binarias, e equivalente ao Ponto-Biserial no caso de comparação de uma variável binária e uma numérica).
+
+<img src="./graficos/correlacao_all.png" width="700" />
+
+- Variáveis como Serviçõ Telefónico ou Género do Cliente (Cliente Masculino) tem uma correlação muito baixa com o Churn.
+- Meses de contrato tem uma alta correlaçao inversa com o Churn. Ou seja, o Churn acontece menos em clientes com maior antiguedade.
+- Faturamento mensal e Contas Diarias tem uma correlação possitiva com o Churn. Isto é, o Churn acontece mais em clientes com valores mais altos de faturamento.
+- Por outro lado Faturamento Total, Cliente tem Dependentes e Cliente tem Parceiro(a) tem correlações negativas com o Churn. Isso significa que o Churn é maior quando o faturamento é menor (isso é coherente com a correlação observada com os Meses de Contrato), e o percentual de Churn é maior para clientes sem Parceiro(a) e sem Dependentes.
+- Se seconsideramos as variáveis numéricas (as 4 últimas) podemos observar que apenas as variáveis Cliente tem Dependentes e Cliente tem Parceiro apresentam uma correlação relativamente alta, se recomenda tomar cuidado com ela e utilizar ferramentas adicionais como VIF (Fator de inflação da Variáncia) para verificar se essa correlação pode gerar problema de multicolinearidade.
+- Enquanto às variaveis (sem o Churn) altas correlações entre as variáveis numéricas, por enquanto deixamos a analisis para depois porque precisaremos verificar se a correlação de Pearson é a mais apropriada para estas variáveis.
+
+A seguir graficamos os histogramas das variáveis numéricas.
+
+<img src="./graficos/histogramas_variaveis_numericas.png" width="600" />
+
+Podemos dizer que a distribuição dessas variáveis não é normal. Por tanto, a correlação de Spearman - que mostramos a seguir - resulta mais apropriada para essas variáveis.
+
+<img src="./graficos/correlacao_variaveis_numericas.png" width="300" />
+
+Os valores resultantes mostram uma alta correlação entre quase todas as variáveis numéricas. Isso explicado pelo fato da variável Contas Diarias ser uma função da variável Faturamento Mensal. Por outra parte tem muito sentido o Faturamento Total estar altamente correlacionado com os Meses de Contrato e com o Faturamento Mensal. Para evitar o problema de multicolinearidade recomendamos excluir as variáveis Faturamento Total e Contas Diarias. Observe que Faturamento Mensal e Meses de Contrato tem a menor correlação entre as variáveis numéricas.
+
 ### Conclusões e Insights
 
-### Recomendações
+- O processo de ETL (extração, transformação e carregamento) de dados que inclui limpar e organizar os dados é um passo previo fundamental à análise descritiva e modelagem estatística.
+- Os dados brutos apresentaram aproximadamente um 3% de registros que tiveram que ser excluidos por apresentar dados inconsistentes.
+- Para tornar os dados mais acessíveis traduzimos o nome das colunas e categorias para o portugues seguindo o padrão de minusculas separadas com underline, no caso das colunas.
+- Após análise exploratória dos dados que inclui a correlação dos mesmos, identificamos que as variáveis Género, Serviço Telefónico e Serviço de Multiplas Linhas podem não trazer informação relevante para explicar o Churn de Clientes. E que considerar as variáveis Faturamento
+- 
+- Por outra parte, observamos um percentual alto de Churn en clientes com as seguintes características:
+  - Clientes com parceiro(a).
+  - Clientes com dependentes.
+  - Clientes que contrataram internet de Fibra Ótica.
+  - Clientes que não contrataram serviço de Segurança Online.
+  - Clientes que não contrataram serviço de Backup Online.
+  - Clientes que não contrataram serviço de Proteção de Dispositivo.
+  - Clientes que não contrataram serviço de Suporte Técnico.
+  - Clientes com tipo de contrato mensal.
+  - Clientes que recebem a fatura online.
+  - Clientes que pagam com Cheque Eletrônico.
+  - Clientes mais novos (menor número de meses de contrato).
+  - Clientes com um Faturamento Mensal maior.
 
-
-
-### Recomendações
-
-
-  
+### Recomendações  
   
