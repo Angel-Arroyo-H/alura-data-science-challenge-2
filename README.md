@@ -55,7 +55,7 @@ Certifique-se de que o relatório esteja bem estruturado, claro e com as visuali
 ## Sobre o desenvolvimento:
 - O desenvolvimento foi feito usando o [Google Colaboratory](https://colab.research.google.com/).
 - O notebook com o desenvolvimento pode ser revisado [aqui](Alura_DataScience_Challenge2.ipynb).
-- **Importante**: Todos os gráficos do Churn vs as Variáveis foram feitos usando Plotly Express. Pelo formato, esses gráficos não conseguem ser exibidos no notebook via Github. No entanto o Notebook pode ser executado no Colab para ver os gráficos. Além disso o Relatorio também foi adicionado aqui no Readme e os gráficos gerados com Plotly Express são exibidos em formato png.   
+- **IMPORTANTE**: Todos os gráficos do Churn vs as Variáveis foram feitos usando Plotly Express. Pelo formato, esses gráficos não conseguem ser exibidos no notebook via Github. No entanto o Notebook pode ser executado no Colab para ver os gráficos. Além disso o Relatorio também foi adicionado aqui no Readme e os gráficos gerados com Plotly Express são exibidos em formato png.   
 - Os requerimentos estão listados do arquivo [requirements.txt](requirements.txt).
 
 ## Relatotio:
