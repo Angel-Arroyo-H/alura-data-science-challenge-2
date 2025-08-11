@@ -1,4 +1,7 @@
-<h1 align="center"> Resolução do Challenge Telecom X - Análise de Evasão de Clientes </h1>
+<h1 align="center"> 
+ Resolução do Challenge Telecom X - Análise de Evasão de Clientes
+ Parte 1
+</h1>
 
 ![Badge Finalizado](http://img.shields.io/static/v1?label=STATUS&message=FINALIZADO&color=GREEN&style=for-the-badge)
 
