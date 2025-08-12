@@ -116,7 +116,7 @@ Para cada variável não numérica mostramos a percentagem de Churn por categor�
   <img src="./graficos/servico_telefonico.png" width="500" />
   <img src="./graficos/rosca_servico_telefonico.png" height="250" />
 
-- Assim também não parece ter diferenças expressivas no percentual de Churn entre clientes que não tem serviço telefónico, clientes que contrataram o serviço telefónio mas que não contrataram o serviço de multiplas linhas e os que contrataram ambos os serviços.
+- Assim também não parece ter diferenças expressivas no percentual de Churn entre clientes que não tem serviço telefónico, clientes que contrataram o serviço telefónio mas que não contrataram o serviço de múltiplas linhas e os que contrataram ambos os serviços.
   
   <img src="./graficos/multiplas_linhas.png" width="500" />
   <img src="./graficos/rosca_multiplas_linhas.png" height="250" />
@@ -196,7 +196,7 @@ Para o cálculo das correlações omitimos as variáveis categóricas. Porém, i
 - Meses de contrato tem uma alta correlação inversa com o Churn. Ou seja, o Churn acontece menos em clientes com maior antiguidade.
 - Faturamento mensal e Contas Diárias tem uma correlação positiva com o Churn. Isto é, o Churn acontece mais em clientes com valores mais altos de faturamento.
 - Por outro lado Faturamento Total, Cliente tem Dependentes e Cliente tem Parceiro(a) tem correlações negativas com o Churn. Isso significa que o Churn é maior quando o faturamento é menor (isso é coherente com a correlação observada com os Meses de Contrato), e o percentual de Churn é maior para clientes sem Parceiro(a) e sem Dependentes.
-- Se consideramos as variáveis numéricas (as 4 últimas) podemos observar que apenas as variáveis Cliente tem Dependentes e Cliente tem Parceiro apresentam uma correlação relativamente alta, se recomenda tomar cuidado com ela e utilizar ferramentas adicionais como VIF (Fator de inflação da Variáncia) para verificar se essa correlação pode gerar problema de multicolinearidade.
+- Se consideramos as variáveis numéricas (as 4 últimas) podemos observar que apenas as variáveis Cliente tem Dependentes e Cliente tem Parceiro apresentam uma correlação relativamente alta, se recomenda tomar cuidado com ela e utilizar ferramentas adicionais como VIF (Fator de inflação da Variância) para verificar se essa correlação pode gerar problema de multicolinearidade.
 - Enquanto às variáveis (sem o Churn) altas correlações entre as variáveis numéricas, por enquanto deixamos a analisis para depois porque precisaremos verificar se a correlação de Pearson é a mais apropriada para estas variáveis.
 
 A seguir graficamos os histogramas das variáveis numéricas.
@@ -212,10 +212,10 @@ Os valores resultantes mostram uma alta correlação entre quase todas as variá
 ### Conclusões e Insights
 
 - O processo de ETL (extração, transformação e carregamento) de dados que inclui limpar e organizar os dados é um passo previo fundamental à análise descritiva e modelagem estatística. O Processo ser revisado em detalhes e reproduzido no seguinte [notebook](Alura_DataScience_Challenge2.ipynb).
-- Os dados brutos apresentaram aproximadamente um 3% de registros que tiveram que ser excluidos por apresentar dados inconsistentes.
+- Os dados brutos apresentaram aproximadamente um 3% de registros que tiveram que ser excluídos por apresentar dados inconsistentes.
 - Para tornar os dados mais acessíveis traduzimos o nome das colunas e categorias para o portugues seguindo o padrão de minusculas separadas com underline, no caso das colunas.
 - Os dados tratados foram salvos em formato CSV e podem ser obtidos [aqui](https://raw.githubusercontent.com/Angel-Arroyo-H/alura-data-science-challenge-2/refs/heads/main/dados/dados_tratados.csv).
-- Após análise exploratória dos dados que inclui a correlação dos mesmos, identificamos que as variáveis Género, Serviço Telefónico e Serviço de Multiplas Linhas podem não trazer informação relevante para explicar o Churn de Clientes. E que considerar as variáveis Faturamento Total e Contas Diárias poderiam trazer problemas de multicolinearidade em modelos de regressão. 
+- Após análise exploratória dos dados que inclui a correlação dos mesmos, identificamos que as variáveis Género, Serviço Telefónico e Serviço de Múltiplas Linhas podem não trazer informação relevante para explicar o Churn de Clientes. E que considerar as variáveis Faturamento Total e Contas Diárias poderiam trazer problemas de multicolinearidade em modelos de regressão. 
 - Por outra parte, observamos um percentual alto de Churn en clientes com as seguintes características:
   - Clientes com parceiro(a).
   - Clientes com dependentes.
@@ -231,18 +231,18 @@ Os valores resultantes mostram uma alta correlação entre quase todas as variá
   - Clientes com um Faturamento Mensal maior.
 
 ### Recomendações
-- possívelmente as variáveis Género, Serviço Telefónico e Serviço de Multiplas Linhas não aportem informação relevante para um futuro modelo de classificação. Avaliar a pertinencia delas.
+- Possívelmente as variáveis Género, Serviço Telefónico e Serviço de Múltiplas Linhas não aportem informação relevante para um futuro modelo de classificação. Avaliar a pertinência delas.
 - A variável Contas Diárias e Faturamento Mensal trazem a mesma informação, se recomenda desconsiderar alguma delas na etapa de modelagem.
 - A alta correlação da variável Faturamento Total com as variáveis Meses de Contrato e Faturamento Mensal pode ocasionar problema de multicolinearidade. Se recomenda desconsiderar a variável Faturamento Total.
-- De certa forma, via analise exploratoria, conseguimos identificar o perfil dos clientes com percentual alto de Churn. Isso ainda precisa ser confirmado pela etapa de modelagem. No entanto, algumas ações podem ser tomadas para verificar hipótesis que derivam desse perfil, e tomar medidas para reduzir o Churn de Clientes. Por exemplo:
+- De certa forma, via analise exploratoria, conseguimos identificar o perfil dos clientes com percentual alto de Churn. Isso ainda precisa ser confirmado pela etapa de modelagem. No entanto, algumas ações podem ser tomadas para verificar hipóteses que derivam desse perfil, e tomar medidas para reduzir o Churn de Clientes. Por exemplo:
   - Vimos um percentual muito alto de Churn (42%) em Clientes que contrataram o serviço de internet de Fibra Ótica (que representam um 44% do total de clientes).
   - Ao respeito algumas hipóteses podem ser levantadas: Será que a internet de Fibra Ótica apresenta baixa qualidade de conexão ou conexão intermitente? Será que a internet de Fibra Ótica oferece mais do que realmente entrega?
   - Os números antes indicados sugerem que uma queda significativa no percentual de Churn de Clientes que contratam internet de Fibra Ótica pode ocasionar uma queda significativa no percentual de Churn de Clientes.
 - Outras variáveis com situação similar ao exemplo anterior são:
-  - Segurança Online: 41,8% de Churn em clientes que não assinaram o serviço, que são o 50% dos Clientes,
-  - Backup Online: 40% de Churn em clientes que não assinaram o serviço, que são o 44% dos Clientes,
-  - Proteção de Dispositivo: 39% de Churn em clientes que não assinaram o serviço, que são o 43% dos Clientes,
-  - Suporte Técnico: 41,6% de Churn em clientes que não assinaram o serviço, que são o 49% dos Clientes,
-  - Contrato: 42,7% de Churn en clientes com tipo de assinatura mensal, que são o 55% dos clientes,
-  - Forma de Pagamento: 45,3% de Churn em clientes que pagam com cheque eletrônico, que são o 33,6% dos Clientes.
+  - Segurança Online: 41,8% de Churn em clientes que não assinaram o serviço, sendo o 50% dos Clientes,
+  - Backup Online: 40% de Churn em clientes que não assinaram o serviço, sendo o 44% dos Clientes,
+  - Proteção de Dispositivo: 39% de Churn em clientes que não assinaram o serviço, sendo o 43% dos Clientes,
+  - Suporte Técnico: 41,6% de Churn em clientes que não assinaram o serviço, sendo o 49% dos Clientes,
+  - Contrato: 42,7% de Churn en clientes com tipo de assinatura mensal, sendo o 55% dos clientes,
+  - Forma de Pagamento: 45,3% de Churn em clientes que pagam com cheque eletrônico, sendo o 33,6% dos Clientes.
   
